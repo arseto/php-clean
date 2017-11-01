@@ -8,8 +8,8 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views'
 ));
 
-$guc = new \CleanPHP\Contexts\GreetingContext\GreetingUseCase();
-$gc = new \CleanPHP\Http\Controllers\GreetingController(
+$guc = new \Greeting\UseCases\Greet\GreetUseCase();
+$gc = new \Greeting\Http\Controllers\GreetingController(
     $app,
     $guc
 );
